@@ -5,11 +5,12 @@ interface DashboardCardProps {
   title: string;
   count: number;
   icon: React.ReactElement<LucideIcon>;
+  bgColor?: string;
 }
 
-const DashboardCard = ({ title, count, icon }: DashboardCardProps) => {
+const DashboardCard = ({ title, count, icon, bgColor }: DashboardCardProps) => {
   return (
-    <Card className="bg-slate-100 dark:bg-slate-800 p-4">
+    <Card className={`${bgColor || 'bg-slate-100 dark:bg-slate-800'} p-4`}>
       <CardContent>
         <h3 className="text-3xl text-center mb-4 font-bold text-slate-500 dark:text-slate-200">
           {title}
