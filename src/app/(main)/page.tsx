@@ -1,3 +1,4 @@
+import AnalyticsChart from '@/components/dashboard/Analytics';
 import DashboardCard from '@/components/dashboard/DashboardCard';
 import PostsTable from '@/components/posts/PostTable';
 import { Button } from '@/components/ui/button';
@@ -7,7 +8,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between gap-5 mb-5">
+      <div className="flex flex-col md:flex-row justify-center gap-5 mb-5">
         <DashboardCard
           title="Posts"
           count={100}
@@ -33,6 +34,7 @@ export default function Home() {
           bgColor="bg-red-100 dark:bg-red-900"
         />
       </div>
+      <AnalyticsChart />
       <PostsTable limit={5} />
     </>
   );
